@@ -67,10 +67,10 @@ puts "Dialogue"
 puts "What is your stores name"
 storeName = gets.chomp
 
-puts store13 = Store.create(name: storeName).valid?
+puts store13 = Store.create(name: storeName)
 
-if store13 = Store.create(name: storeName).valid? == false
+if store13.valid? == false
 
-puts "Error: Missing fields"
+puts store13.errors.full_messages
 
 end
